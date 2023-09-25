@@ -1,0 +1,4 @@
+scikit-image
+nltk==3.2.5
+wandb
+timm
