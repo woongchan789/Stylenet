@@ -47,10 +47,22 @@ Stylenet experiments using various encoders (resnet152, inception_v3, vit_base_r
 
 ## 실험결과
 
-- 실험은 시간이 너무 오래 걸리는 관계로 factual, homorous만 진행
-- 3개의 encoder에 따른 cross entropy loss 결과값 확인
-- 3개의 encoder에 따른 sample 15개의 caption quality 확인
+- BLEU, CIDEr과 같은 정량적 평가는 진행하지 못함
+- 학습된 encoder, decoder를 기반으로 sample image에 대해 inference를 진행
+- 실험하는 과정에서 epoch, encoder&decoder batch size를 모두 축소해서 진행
 
+- Encoder1: Resnet-152
+<p align="center"><img src="https://github.com/woongchan789/Stylenet/assets/75806377/d4e06977-0531-4c58-8087-8bcec3b0982e"></p>
 
+- Encoder2: Inception-v3
+<p align="center"><img src="https://github.com/woongchan789/Stylenet/assets/75806377/de0a0817-bfd5-4a23-bc22-0a5f61fac197"></p>
+
+- Encoder3: Vision transformer based Resnet-50
+<p align="center"><img src="https://github.com/woongchan789/Stylenet/assets/75806377/8d0896b2-0bcb-4560-99ba-f633a52f6532"></p>
+
+## 원인분석
+
+- 초기 official code를 돌렸을 때마다 발생했던 오류를 디버깅하는 과정에서 추가한 코드 or Dataparellel 작동원리를 이해하지 못하고 사용
+- epoch 수 감소, batch_size 감소..?
 
 
