@@ -1,11 +1,12 @@
 # Stylenet
 Stylenet experiments using various encoders (resnet152, inception_v3, vit_base_resnet50_224_in21k)
 
-## 구현논문: Stylenet: Generating Attractive Visual Captions with Styles (CVPR, 2017)
-Link: https://ieeexplore.ieee.org/document/8099591/similar#similar
+## 구현논문
+- Stylenet: Generating Attractive Visual Captions with Styles (CVPR, 2017)
+- Link: https://ieeexplore.ieee.org/document/8099591/similar#similar
 
 ## Overview
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/5faa01cb-5c3a-45ea-8eef-e5aa79e3619c/d86d4e1f-a396-4469-aa8e-98058d1746a4/Untitled.png)
+![1](https://github.com/woongchan789/Stylenet/assets/75806377/02458e23-4c52-4c89-8020-f382a49aeec8)
 
 - 일반적으로 (image, caption) dataset은 a factual description에 집중되어있음
 - 본 논문에서는 조금 더 attractive image caption을 생성하는 것을 목적으로 하였고, 이를 style로 표현하여 다양한 style의 caption을 생성해내고자 하였음
@@ -13,7 +14,7 @@ Link: https://ieeexplore.ieee.org/document/8099591/similar#similar
 - Style: Romantic (간지폭발), Humorous (개꿀잼)
 
 ## Approach
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/5faa01cb-5c3a-45ea-8eef-e5aa79e3619c/dfa168c4-a16a-4a82-a1cc-ab81e68b2cf3/Untitled.png)
+![2](https://github.com/woongchan789/Stylenet/assets/75806377/0f07b957-1b09-485f-aacf-8540aa83b89a)
 
 - 본 논문에서는 Romantic, Humorous한 단어들을 학습하기 위해 (image, romantic_caption), (image, humorous_caption) 이렇게 **image-stylized caption pair**로 학습하는 방식이 아닌 **monolingual stylized language corpus**로 학습을 진행
 - 보다 자세히 본 논문에서는 ‘**monolingual stylized language corpus**’로 선택한 것은 ‘For the additional text corpus, **we used the 7K stylized captions without paired images** to train the stylized language model.’
